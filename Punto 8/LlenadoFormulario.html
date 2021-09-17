@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script>
+        function enfocado(id_objeto) {
+            document.getElementById(id_objeto).style.border = "2px solid red";
+        }
+        function desenfocado(id_objeto) {
+            document.getElementById(id_objeto).style.border = "inherit";
+        }
+    </script>
+</head>
+<body>
+    <form action="mailto:nicolascaytuirosilva@gmail.com" method="post" enctype="text/plain">
+        <h1>Bienvenido</h1>
+        <fieldset>
+            <legend>Datos personales</legend>
+            Introduce tu nombre:
+            <input name="Nombre" id="nombre" type="text" onfocus="javascript:enfocado(this.id);"
+                onblur="javascript:desenfocado(this.id);"> <br>
+            Mensaje:
+            <textarea name="Mensaje" cols="60" rows="6"></textarea> <br>
+        </fieldset>
+        <br />
+        <hr />
+        <input type="button" value="Haz click sobre mi" onclick="javascript:window.location='http://www.google.com'"/>
+        <hr />
+        Selecciona el color de tu icono: <br />
+        <input type="radio" name="coloricono" value="rojo" /> Rojo <br />
+        <input type="radio" name="coloricono" value="verde" /> Verde <br />
+        <input type="radio" name="coloricono" value="azul" /> Azul <br />
+        <hr />
+        Escoja una materia:
+        <select>
+            <optgroup label="Obligatorias">
+                <option value="mat">Matem&aacute;ticas</option>
+                <option value="len">Lenguaje</option>
+            </optgroup>
+            <optgroup label="Optativas">
+                <option value="cor">Corte y confecci&oacute;n</option>
+                <option value="ast">Astronom&iacute;a</option>
+            </optgroup>
+        </select>
+        <hr />
+        Selecciona los d&iacute;as con disponibilidad: <hr />
+        <input type="checkbox" name="dias" value="l" /> Lunes <hr />
+        <input type="checkbox" name="dias" value="m" /> Martes <hr />
+        <input type="checkbox" name="dias" value="mm" /> Miercoles <hr />
+        <input type="checkbox" name="dias" value="j" /> Jueves <hr />
+        <input type="checkbox" name="dias" value="v" /> Viernes <hr />
+        <hr />
+        Selecciona el d&iacute; preferente: <hr />
+        <select>
+            <option value=""> Seleccione un d&iacute;a </option>
+            <option value="l"> Lunes </option>
+            <option value="m"> Martes </option>
+            <option value="mm"> Miercoles </option>
+            <option value="j"> Jueves </option>
+            <option value="v"> Viernes </option>
+        </select>
+        <hr />
+        Adjunta tu curriculum vitae
+        <input type="file" name="Curriculum" />
+        <hr />
+        <input type="submit" value="Haz click para evitar la informaci&oacute;on" />
+        <input type="reset" value="Comenzar a rellenar de nuevo" />
+    </form>
+</body>
+</html>
