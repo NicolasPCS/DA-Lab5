@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de empleados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <script src="js/main.js"></script>
+</head>
+<body onload="calcularSalarioNeto()">
+    <div class="container text-center">
+        <div class="display-2">Salario neto</div>
+        <table class="table">
+            <tr>
+                <td>Puesto</td>
+                <td>Horas</td>
+                <td>Años</td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="puesto" class="form-control" onchange="calcularSalarioNeto()">
+                        <option value="1">Gerente</option>
+                        <option value="2">Secretaria</option>
+                        <option value="3">Desarrollador</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="horas" class="form-control" onchange="calcularSalarioNeto()">
+                        <script>
+                            for (var i = 0; i <= 50; i++) {
+                                document.write("<option value'"+i+"'>"+i+
+                                    "</option>");
+                            }
+                        </script>
+                    </select>
+                </td>
+                <td>
+                    <select id="anios" class="form-control" onchange="calcularSalarioNeto()">
+                        <script>
+                            for (var i = 0; i <= 40; i++) {
+                                document.write("<option value'"+i+"'>"+i+
+                                    "</option>");
+                            }
+                        </script>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table class="table">
+            <tr>
+                <td colspan="2"><h2>PERCEPCIONES</h2></td>
+                <td colspan="2"><h2>DEDUCCIONES</h2></td>
+            </tr>
+            <tr>
+                <td>Sueldo base</td>
+                <td><span id="sueldoBase"></span></td>
+                <td>ISR</td>
+                <td><span id="ISR"></span></td>
+            </tr>
+            <tr>
+                <td>Canasta básica</td>
+                <td><span id="canastaBasica"></span></td>
+                <td>Servicio de Salud</td>
+                <td><span id="servicioSalud"></span></td>
+            </tr>
+            <tr>
+                <td>Apoyo</td>
+                <td><span id="apoyo"></span></td>
+                <td>AFORE</td>
+                <td><span id="afore"></span></td>
+            </tr>
+            <tr>
+                <td>Antiguedad</td>
+                <td><span id="antiguedad"></span></td>
+                <td>Sindicato</td>
+                <td><span id="sindicato"></span></td>
+            </tr>
+            <tr>
+                <td>Estimulo</td>
+                <td><span id="estimulo"></span></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><h4>TOTAL PERCEPCIONES</h4></td>
+                <td><span id="totalPercepciones"></span></td>
+                <td><H4>TOTAL DEDUCCIONES</H4></td>
+                <td><span id="totalDeducciones"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2"><h4>SALARIO NETO</h4></td>
+                <td colspan="2"><span id="salarioNeto"></span></td>
+            </tr>
+        </table>
+    </div>
+
+    
+</body>
+</html>
